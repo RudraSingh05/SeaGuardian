@@ -1,6 +1,7 @@
 import React from 'react';
-import "../css/home.css";
 import { Link } from 'react-router-dom';
+import { Instagram, LinkedIn, Twitter, YouTube, GitHub } from '@mui/icons-material';
+import "../css/home.css";
 
 function Footer() {
   return (
@@ -12,11 +13,12 @@ function Footer() {
             <p>Stay up to date with our news and articles</p>
           </div>
           <div className="footer-subscribe">
-          <Link to="/donate">
+            <Link to="/donate">
               <button id="donate">Donate</button>
             </Link>
           </div>
         </section>
+
         <div className="footer-columns">
           <section className="footer-logo">
             <img src="/logo 1.png" alt="SeaGuardian" />
@@ -31,20 +33,21 @@ function Footer() {
           <section>
             <h3>Resources</h3>
             <ul>
-              <li><Link href="./latest.html">Latest Works</Link></li>
-              <li><Link href="./ourProgram.html">Our Programs</Link></li>
+              <li><Link to="/latest">Latest Works</Link></li>
+              <li><Link to="/our-programs">Our Programs</Link></li>
               <li><Link to="/faqs">FAQs</Link></li>
             </ul>
           </section>
         </div>
+
         <div className="footer-bottom">
-          <small>© SeaGuardian <span id="year"></span>, All rights reserved</small>
+          <small>© SeaGuardian {new Date().getFullYear()}, All rights reserved</small>
           <span className="social-links">
-            <Link href="#"><img src="/instagram.svg" alt="Instagram" /></Link>
-            <Link href="#"><img src="/linkedin.svg" alt="LinkedIn" /></Link>
-            <Link href="#"><img src="/twitter.svg" alt="Twitter" /></Link>
-            <Link href="#"><img src="/youtube.svg" alt="YouTube" /></Link>
-            <Link href="#"><img src="/github.svg" alt="GitHub" /></Link>
+            <Link to="#"><Instagram /></Link>
+            <Link to="#"><LinkedIn /></Link>
+            <Link to="#"><Twitter /></Link>
+            <Link to="#"><YouTube /></Link>
+            <Link to="#"><GitHub /></Link>
           </span>
         </div>
       </div>
